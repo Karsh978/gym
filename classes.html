@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Classes & Membership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="classes.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="gymname">THE POWER GYM<sup>&#174;</sup></div>
+            <span>health planet</span>
+        </div>
+        <i class="fas fa-bars menu-toggle"></i>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="classes.html">CLASSES MEMBERSHIP</a></li>
+                <li><a href="franchise.html">FRANCHISE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="first-sec">
+        <img src="images/gym13.jpg" alt="Gym equipment and workout area">
+    </section>
+
+    <div class="seco">
+        <h1>Classes at The Gym</h1>
+        <p>Take care of your body. It's the only place you have to live.</p>
+    </div>
+
+    <section class="second-sec">
+        <div class="container">
+            <img src="images/gym14.jpg" alt="Gym equipment in use">
+            <img src="images/gym15.jpg" alt="Interior view of the gym showing workout space">
+        </div>
+        <div class="container2">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore doloremque delectus suscipit dolorem
+                officia quasi, eligendi quas esse cumque reprehenderit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam repudiandae qui ullam facilis
+                architecto corporis nostrum magni voluptatem, possimus labore nemo beatae ducimus ipsam veniam libero?
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore doloremque delectus suscipit dolorem
+                officia quasi, eligendi quas esse cumque reprehenderit.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident aperiam repudiandae qui ullam facilis
+                architecto corporis nostrum magni voluptatem, possimus labore nemo beatae ducimus ipsam veniam libero?
+            </p>
+        </div>
+    </section>
+
+    <section class="third-sec">
+        <div class="third">
+            <img src="images/gym16.jpg" alt="Yoga class in action">
+            <img src="images/gym17.jpg" alt="Cardio fitness training session">
+        </div>
+        <div class="container3">
+            <p>
+                One up, slim down, and find balance with this high-energy summer workout from power yoga. It brings inner
+                peace, a spiritual boost, and an unparalleled measure of serenity. Power yoga is a general term used to
+                describe a vigorous form of yoga.
+            </p>
+            <p>
+                Cardio fitness is important to everyone. Quality cardio workouts can help everybody reach their health
+                and fitness goals, whether those goals include new personal records for competition, lowering blood
+                pressure, or managing diabetes.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <h1>Created by .Jarvis, G-One & Daya | @All Rights Reserved</h1>
+            <ul>
+                <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="/terms-of-service.html">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('main-nav');
+            
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

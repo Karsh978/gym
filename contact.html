@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="contactus.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="gymname">THE POWER GYM<sup>&#174;</sup></div>
+            <span>Health Planet</span>
+        </div>
+        <i class="fas fa-bars menu-toggle"></i>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="classes.html">CLASSES MEMBERSHIP</a></li>
+                <li><a href="franchise.html">FRANCHISE</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="first-sec">
+        <div>
+            <img src="images/gym31.jpg" alt="Gym Image" loading="lazy">
+        </div>
+    </section>
+
+    <section class="qq">
+        <div class="container">
+            <h1>Address</h1>
+            <b>kosir </b>
+            <p>kosir sarangarh chhatisgarh<br>496445</p>
+            <p>📞 6267216334</p>
+            
+            <p>Website: <a href="https://www.powergym.com" target="_blank" rel="noopener noreferrer">www.powergym.com</a></p>
+        </div>
+
+        <div class="container1">
+            <h1>CONTACT US</h1>
+            <form action="https://api.web3forms.com/submit" method="post" id="contact-form">
+                <input type="hidden" name="access_key" value="5a209989-a8f0-4537-84d3-9a038d1706fb">
+                
+                <div class="from_control">
+                    <label for="first_name">Name</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="First Name" required pattern="[A-Za-z\s]+" title="Please enter a valid name" autocomplete="off">
+                </div>
+
+                <div class="from_control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email_name" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="from_control">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="4" placeholder="Enter your address" required></textarea>
+                </div>
+
+                <div class="from_control">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="buttoom_container">
+                    <button type="submit" id="apply">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <h1>Created by .Jarvis, G-One & Daya | @ All Rights Reserved</h1>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.getElementById('main-nav');
+
+            if (menuToggle && nav) {
+                menuToggle.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+            }
+        });
+
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            const name = document.getElementById('first_name').value;
+            const email = document.getElementById('email_name').value;
+            const address = document.getElementById('address').value;
+            const date = document.getElementById('date').value;
+
+            if (!name || !email || !address || !date) {
+                alert("Please fill in all required fields.");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+  /* General and Core Styles */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+            color: #fff;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            line-height: 1.6;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .gymname {
+            color: #ff0000;
+            font-size: 2.2rem;
+            font-family: 'Montserrat', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .gymname sup {
+            font-size: 0.5em;
+            vertical-align: top;
+            color: #ccc;
+        }
+
+        header span {
+            color: #ccc;
+            font-family: 'Impact', sans-serif;
+            font-style: oblique;
+            font-size: 0.9em;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover li {
+            color: #ff0000;
+        }
+
+        nav li {
+            color: #fff;
+            font-size: 17px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            color: #fff;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .first-sec img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: brightness(0.6);
+        }
+
+        /* Franchise Content Section */
+        .container1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 50px 5%;
+            background-color: #1a1a1a;
+        }
+
+        .container1 img,
+        .container1 iframe {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            filter: brightness(0.9);
+        }
+        
+        .container1 img:hover,
+        .container1 iframe:hover {
+            transform: scale(1.02);
+            filter: brightness(1);
+        }
+
+        /* Text Block Section */
+        .text-section {
+            padding: 50px 5%;
+            background-color: #0d0d0d;
+        }
+
+        .container2 {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container2 b {
+            display: block;
+            color: #ff0000;
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .container2 p {
+            text-align: justify;
+            text-indent: 0;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+            color: #ccc;
+        }
+        
+        .container2 b:first-child {
+            margin-top: 0;
+        }
+
+        /* Image Gallery Section */
+        .third-sec {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 5%;
+            background-color: #1a1a1a;
+        }
+
+        .third-sec img {
+            width: 100%;
+            max-width: 350px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            filter: brightness(0.8);
+        }
+
+        .third-sec img:hover {
+            transform: scale(1.05);
+            filter: brightness(1);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            padding: 50px 5%;
+            border-top: 2px solid #ff0000;
+            text-align: center;
+        }
+
+        footer h1 {
+            font-size: clamp(0.8rem, 2vw, 1rem);
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        footer ul li a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: color 0.3s ease;
+        }
+
+        footer ul li a:hover {
+            color: #ff0000;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                background-color: #1a1a1a;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                padding: 20px 0;
+                border-top: 1px solid #444;
+            }
+
+            nav.active ul {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo-container {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
